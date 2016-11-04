@@ -31,11 +31,15 @@
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
-            <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="resources/views/vendor/adminlte/layouts/partials/test.html" id="empA"><span>Employee</span></a></li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-link'></i> <span>Employee</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('home') }}">View List</a></li>
+                    <li><a href="{{ url('addEmployee') }}">Add Employee</a></li>
+                </ul>
+            </li>
 
-            <li class=""><h3 onclick="process()"><span>Employee</span></h3></li>
+
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.multilevel') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">

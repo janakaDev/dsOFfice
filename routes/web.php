@@ -15,12 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('ajax',function(){
-   return view('message');
+Route::post('emloyees',function(){
+   return view('/employee');
 });
 
-Route::post('/getmsg','AjaxController@index');
 
-Auth::routes();
+
+Route::get('fulldetails/{id}', 'employeeController@index');
+Route::get('calender', 'calenderController@cal');
+
+
+Route::resource('addEmployee', 'AddEmployeeController');
 

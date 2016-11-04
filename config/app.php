@@ -164,6 +164,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        MaddHatter\LaravelFullcalendar\ServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -229,6 +231,9 @@ return [
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
         'Form' => Collective\Html\FormFacade::class, 
         'Html' => Collective\Html\HtmlFacade::class, 
+        'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
+        'Input'     => Illuminate\Support\Facades\Input::class,
+
     ],
 
 ];
